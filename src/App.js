@@ -1,48 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-import { useEffect, useState } from 'react';
-import { createClient } from 'contentful';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from "./components/partials/Header";
+import Footer from "./components/partials/Footer";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Work from "./components/pages/Work";
+import Blog from "./components/pages/Blog";
+import Contact from "./components/pages/Contact";
 
 function App() {
-
-  const [blogPosts, setBlogPosts] = useState([]);
-
-  const client = createClient({space: "auxbdc5uqthn", accessToken: "fg4gnvrqr0Fi8tUtBSZ3ic5aiSkf-hU6nYBHvTYcGdc"})
-
-  useEffect(() => {
-    const getAllEntries = async () => {
-      try {
-        await client.getEntries().then((entries) => {
-          console.log(entries)
-          setBlogPosts(entries)
-        })
-      } catch (error) {
-        console.log("error")
-      }
-    }
-
-    getAllEntries();
-  })
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-
-          testing testing
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+    <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    <Footer />
+    </BrowserRouter>
+    </>
   );
 }
 
