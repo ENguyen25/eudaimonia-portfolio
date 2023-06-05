@@ -1,3 +1,73 @@
 .nav-links {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.about-first-column {
+  padding-top: 20%;
+}
+
+.about-second-column {
+  padding-top: 10%;
+}
+
+.about-second-column img {
+  position: fixed;
+  width: 30%;
+}
+
+.title {
+  font-family: "News Cycle", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.header-1 {
+  font-size: 5rem;
+}
+
+.header-2 {
+  font-size: 3rem;
+}
+
+p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 769px) {
+  .header-1 {
+    font-size: 4rem;
+  }
+
+  .header-2 {
+    font-size: 3rem;
+  }
+
+  .about-first-column {
+    padding-top: 70%;
+  }
+
+  .about-second-column img {
+    position: absolute;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+  }
+
+  .section {
+    padding: 3rem 2.5rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .header-1 {
+    font-size: 3rem;
+  }
+
+  .header-2 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 2rem 1.5rem;
+  }
 }
