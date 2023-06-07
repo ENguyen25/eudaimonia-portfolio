@@ -1,8 +1,5 @@
 import React from "react";
 
-import "../../css/mystyles.css";
-import "../../css/customstyle.css";
-
 const About = () => {
   return (
     <div className="container">
@@ -10,7 +7,7 @@ const About = () => {
         <div className="column is-three-fifths about-first-column">
           <section className="section">
             <h1 className="title header-1">About Me</h1>
-            <p>
+            <p className="regular-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -22,7 +19,7 @@ const About = () => {
           </section>
           <section className="section">
             <h2 className="title header-2">My Philosophy</h2>
-            <p>
+            <p className="regular-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -34,7 +31,7 @@ const About = () => {
           </section>
           <section className="section">
             <h2 className="title header-2">My Vision</h2>
-            <p>
+            <p className="regular-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

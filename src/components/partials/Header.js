@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -27,7 +28,7 @@ const Header = () => {
 
         <div id="navbarBasicExample" className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
           <div className="navbar-start">
-            <a className="navbar-item" href="https://bulma.io">
+            <a className="navbar-item" href="/">
               <img
                 src="https://bulma.io/images/bulma-logo.png"
                 width="112"
@@ -37,10 +38,10 @@ const Header = () => {
           </div>
 
           <div className="navbar-end">
-            <a class="navbar-item nav-links">about</a>
-            <a class="navbar-item nav-links">work</a>
-            <a class="navbar-item nav-links">blog</a>
-            <a class="navbar-item nav-links">contact</a>
+            <a class="navbar-item nav-links"><Link to="/about">about</Link></a>
+            <a class="navbar-item nav-links"><Link to="/work">work</Link></a>
+            <a class="navbar-item nav-links"><Link to="/blog">blog</Link></a>
+            <a class="navbar-item nav-links"><Link to="/contact">contact</Link></a>
           </div>
         </div>
       </nav>
