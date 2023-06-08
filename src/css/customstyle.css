@@ -1,9 +1,9 @@
 :root {
-  --green: #396B51;
-  --mint: #88BBA1;
-  --mint-lighter: #CEEDDB;
-  --white: #FFFFFF;
-  --gray: #36413E;
+  --green: #396b51;
+  --mint: #88bba1;
+  --mint-lighter: #ceeddb;
+  --white: #ffffff;
+  --gray: #36413e;
   --black: #000000;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .general-container {
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 
 .overlay-container {
@@ -36,7 +36,7 @@
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
   background-color: var(--white);
 }
 
@@ -59,10 +59,11 @@
 }
 
 .home-second-column {
-  padding: 3rem 6rem;
+  padding-left: 7rem;
 }
 
-.title, .small-title {
+.title,
+.small-title {
   font-family: "News Cycle", sans-serif;
   text-transform: uppercase;
 }
@@ -100,6 +101,18 @@ p {
   font-size: 1.2rem;
 }
 
+.blog-list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 32%;
+  margin-bottom: 1rem;
+}
+
 @media screen and (max-width: 769px) {
   .header-1 {
     font-size: 3rem;
@@ -129,10 +142,14 @@ p {
     margin: auto;
     padding: 0 0.75rem;
   }
+
+  .card {
+    width: 48%;
+    margin-bottom: 1rem;
+  }
 }
 
 @media screen and (max-width: 426px) {
-
   .about-first-column {
     padding-top: 70%;
   }
@@ -140,9 +157,14 @@ p {
   .section {
     padding: 2rem 1.5rem;
   }
-  
+
   .project-column {
     width: 90%;
     margin: auto;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }

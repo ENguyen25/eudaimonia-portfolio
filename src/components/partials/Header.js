@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -38,10 +37,10 @@ const Header = () => {
           </div>
 
           <div className="navbar-end">
-            <a class="navbar-item nav-links"><Link to="/about">about</Link></a>
-            <a class="navbar-item nav-links"><Link to="/work">work</Link></a>
-            <a class="navbar-item nav-links"><Link to="/blog">blog</Link></a>
-            <a class="navbar-item nav-links"><Link to="/contact">contact</Link></a>
+            <a href="/about" className="navbar-item nav-links">about</a>
+            <a href="/work" className="navbar-item nav-links">work</a>
+            <a href="/blog" className="navbar-item nav-links">blog</a>
+            <a href="/contact" className="navbar-item nav-links">contact</a>
           </div>
         </div>
       </nav>
