@@ -1,6 +1,13 @@
 import React from "react";
 
-const Project = () => {
+const Project = (props) => {
+
+  const name = props.data.name;
+  const description = props.data.description;
+  const tech = props.data.technologies;
+  const github = props.data.github;
+  const url = props.data.url;
+
   return (
     <div className="overlay-container">
       <img
@@ -9,7 +16,11 @@ const Project = () => {
         alt="nature landscape"
       />
       <div className="overlay">
-        <p>Ay yo mama</p>
+        <h1 className="title header-2 blog-entry-header">{name}</h1>
+        <p>{description}</p>
+        <p>Technologies: {tech}</p>
+        <button className="card-button button"><a href={github}>Source Code</a></button>
+        <button className="card-button button"><a href={url}>Demo</a></button>
       </div>
     </div>
   );

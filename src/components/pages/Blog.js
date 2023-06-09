@@ -11,8 +11,6 @@ const Blog = () => {
     accessToken: "fg4gnvrqr0Fi8tUtBSZ3ic5aiSkf-hU6nYBHvTYcGdc",
   });
 
-  const posts = [{ id: 1, text: "hello world" }];
-
   useEffect(() => {
     const getAllEntries = async () => {
       try {

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Sunny Side App",
+        "description": "A weather app created with JavaScript that is based on a Dribbble design.",
+        "technologies": "React, JavaScript, WeatherAPI, Bulma, SASS, CSS",
+        "github": "",
+        "url": ""
+    },
+    {
+        "id": 2,
+        "name": "Assistant Store Manager",
+        "description": "Abercrombie & Fitch Co.",
+        "technologies": "React, JavaScript, WeatherAPI",
+        "github": "",
+        "url": ""
+    }, 
+    {
+        "id": 3,
+        "name": "Committee Member",
+        "description": "Project Launchpad",
+        "technologies": "React, JavaScript, WeatherAPI",
+        "github": "",
+        "url": ""
+    }
+]

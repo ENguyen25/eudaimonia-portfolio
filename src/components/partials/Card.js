@@ -1,9 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import moment from "moment/moment";
 
 const Card = (props) => {
+
+  const postId = props.data.sys.id
   const entryTitle = props.data.fields.title;
   const entryImage = props.data.fields.featuredImage.fields.file.url;
+  const entryContent = props.data.fields.content.content[0].content[0].value
+  const entryPreview = entryContent.slice(0,200);
   const publishedDate = moment(props.data.fields.publishedDate).format(
     "MMMM D, Y"
   );
@@ -16,19 +21,14 @@ const Card = (props) => {
         </figure>
       </div>
       <div className="card-content">
+        <time className="date">{publishedDate}</time>
         <div className="media">
           <div className="media-content">
-            <p className="title is-4">{entryTitle}</p>
-            <p className="subtitle is-6">@johnsmith</p>
+            <p className="title is-3">{entryTitle}</p>
           </div>
         </div>
-        <div className="content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-          iaculis mauris. <a>@bulmaio</a>.<a href="#">#css</a>{" "}
-          <a href="#">#responsive</a>
-          <br />
-          <time>{publishedDate}</time>
-        </div>
+        <div className="content">{entryPreview}...</div>
+        <button className="card-button button"><Link to={`/blog/${postId}`}>Read More</Link></button>
       </div>
     </div>
   );

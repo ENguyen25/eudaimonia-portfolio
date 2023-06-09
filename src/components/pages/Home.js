@@ -1,5 +1,6 @@
 import React from "react";
 import Project from "../partials/Project";
+import projects from "../../projects.json"
 
 const Home = () => {
   return (
@@ -31,7 +32,11 @@ const Home = () => {
         <h1 className="title header-2">Web Design & Development</h1>
         <div className="columns">
           <div className="column is-half project-column">
-            <Project />
+            {projects.map((project) => {
+              return (
+                <Project key={project.id} data={project} />
+              )
+            })}
           </div>
           <div className="column is-half project-column"></div>
         </div>

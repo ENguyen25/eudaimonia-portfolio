@@ -6,6 +6,7 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Work from "./components/pages/Work";
 import Blog from "./components/pages/Blog";
+import BlogEntry from "./components/pages/BlogEntry";
 import Contact from "./components/pages/Contact";
 
 import "./css/mystyles.css";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/work" element={<Work />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog/:id" element={<BlogEntry />} /> 
         </Routes>
         <Footer />
       </BrowserRouter>
