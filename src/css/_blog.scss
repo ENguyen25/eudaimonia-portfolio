@@ -1,0 +1,37 @@
+@import "../sass/mystyles.scss";
+
+/* BLOG PAGE */
+
+.blog-entry-title,
+.card {
+  margin-bottom: 1rem;
+}
+
+.card {
+  width: 32%;
+}
+
+.card-button:hover {
+  border: solid $white 2px;
+  background-color: $black;
+}
+
+.blog-text {
+  margin-top: 1rem;
+}
+
+/* Tablet View */
+
+@media screen and (max-width: 769px) {
+  .card {
+    width: 48%;
+  }
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 426px) {
+  .card {
+    width: 100%;
+  }
+}

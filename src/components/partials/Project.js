@@ -1,4 +1,5 @@
 import React from "react";
+import { Slide } from "react-reveal";
 
 const Project = (props) => {
 
@@ -9,20 +10,24 @@ const Project = (props) => {
   const url = props.data.url;
 
   return (
-    <div className="overlay-container">
-      <img
-        className="project-thumbnail"
-        src="https://images.unsplash.com/photo-1455218873509-8097305ee378?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
-        alt="nature landscape"
-      />
-      <div className="overlay">
-        <h1 className="title header-2 blog-entry-header">{name}</h1>
-        <p>{description}</p>
-        <p>Technologies: {tech}</p>
-        <button className="card-button button"><a href={github}>Source Code</a></button>
-        <button className="card-button button"><a href={url}>Demo</a></button>
+    <Slide bottom>
+      <div className="overlay-container">
+        <img
+          className="project-thumbnail"
+          src="https://images.unsplash.com/photo-1455218873509-8097305ee378?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+          alt="nature landscape"
+        />
+        <div className="overlay px-6 py-6 is-flex is-flex-direction-column is-justify-content-end">
+          <h2 className="title is-size-3 is-family-sans-serif is-uppercase">{name}</h2>
+          <p className="is-size-5">{description}</p>
+          <p className="is-size-5 py-3">Technologies: {tech}</p>
+          <div className="is-flex is-justify-content-center">
+            <button className="site-button button mr-5"><a href={github}>Source Code</a></button>
+            <button className="site-button button"><a href={url}>Demo</a></button>
+          </div>
+        </div>
       </div>
-    </div>
+    </Slide>
   );
 };
 

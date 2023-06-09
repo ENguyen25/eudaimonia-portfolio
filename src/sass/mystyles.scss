@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Neuton:200,300,400');
 
 // Set your brand colors
-$green: #1a936f;
+$green: #396B51;
 $mint: #88BBA1;
 $mint-lighter: #CEEDDB;
 $white: #FFFFFF;
@@ -13,7 +13,8 @@ $gray: #36413E;
 $black: #000000;
 
 // Update Bulma's global variables
-$family-sans-serif: "Neuton", serif;
+$family-primary: "Neuton", serif;
+$family-sans-serif: "News Cycle", sans-serif;
 $grey-dark: $black;
 $primary: $green;
 $link: $black;
@@ -25,9 +26,14 @@ $fullhd-enabled: false;
 $body-background-color: $mint-lighter;
 $navbar-background-color: $mint-lighter;
 $footer-background-color: $mint-lighter;
+$footer-padding: 3rem 1.5rem 1.5rem 1.5rem;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
+$section-padding: 2rem;
+$section-padding-desktop: 3rem 0;
+$button-border-color: $black !important;
+$button-family: $family-sans-serif;
 
 // Import only what you need from Bulma
 @import "../../node_modules/bulma/sass/base/_all.sass";

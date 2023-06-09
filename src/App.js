@@ -10,7 +10,7 @@ import BlogEntry from "./components/pages/BlogEntry";
 import Contact from "./components/pages/Contact";
 
 import "./css/mystyles.css";
-import "./css/customstyle.css";
+import "./css/_all.scss";
 
 function App() {
   return (

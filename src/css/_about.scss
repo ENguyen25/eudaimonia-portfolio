@@ -1,0 +1,27 @@
+@import '../sass/mystyles.scss';
+
+/* ABOUT PAGE */
+
+.about-second-column {
+  margin-top: 10%;
+}
+
+.about-second-column img {
+  position: fixed;
+  width: 30%;
+}
+
+/* Tablet View */
+
+@media screen and (max-width: 769px) {
+  .about-first-column {
+    margin-top: 50%;
+  }
+
+  .about-second-column img {
+    position: absolute;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+  }
+}

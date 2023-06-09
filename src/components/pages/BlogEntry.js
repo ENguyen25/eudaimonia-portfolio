@@ -30,12 +30,14 @@ const BlogEntry = () => {
 
   return (
     <div className="container general-container">
-      <img src={singleBlogPost?.fields?.featuredImage?.fields?.file?.url} alt="trees" />
-      <h1 className="blog-entry-header header-2">{singleBlogPost?.fields?.title}</h1>
-      <p className="date">{
-        moment(singleBlogPost?.fields?.publishedDate).format("MMMM D, Y")  
-      }</p>
-      <p className="regular-text blog-text">{singleBlogPost?.fields?.content?.content[0].content[0].value}</p>
+      <section className="section">
+        <img src={singleBlogPost?.fields?.featuredImage?.fields?.file?.url} alt="trees" />
+        <h1 className="title is-size-1 is-family-sans-serif is-uppercase has-text-weight-light mt-5 mb-1">{singleBlogPost?.fields?.title}</h1>
+        <p className="is-size-6 is-family-sans-serif mb-5">{
+          moment(singleBlogPost?.fields?.publishedDate).format("MMMM D, Y")  
+        }</p>
+        <p className="is-size-5">{singleBlogPost?.fields?.content?.content[0].content[0].value}</p>
+      </section>
     </div>
   );
 };

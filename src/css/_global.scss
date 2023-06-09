@@ -1,0 +1,62 @@
+@import "../sass/mystyles.scss";
+
+/* GLOBAL ELEMENTS */
+
+/* Header */
+
+.nav-links {
+  font-size: 1.5rem;
+  width: 5.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links:hover {
+  color: $gray !important;
+  background-color: $gray !important;
+}
+
+/* Layout */
+
+.general-container {
+  padding-top: 3rem;
+}
+
+.flex-wrap-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.site-button {
+  border: solid $black 1.6px !important;
+  border-radius: 0 !important;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  background-color: rgba(0,0,0,0) !important;
+}
+
+.site-button:hover {
+  background-color: $black !important;
+}
+
+/* Tablet View */
+
+@media screen and (max-width: 769px) {
+  .section {
+    padding: 2rem 2.5rem;
+  }
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 426px) {
+  .section {
+    padding: 2rem 1.5rem;
+  }
+
+  .flex-wrap-content {
+    display: block;
+  }
+}

@@ -28,12 +28,14 @@ const Blog = () => {
 
   return (
     <div className="container general-container">
-      <h1 className="title header-1">Blog</h1>
-      <div className="blog-list-container">
-        {blogPosts.map((items) => {
-          return <Card key={items.sys.id} data={items} />;
-        })}
-      </div>
+      <section className="section">
+        <h1 className="title is-size-1 is-family-sans-serif is-uppercase has-text-weight-light">Blog</h1>
+        <div className="flex-wrap-content">
+          {blogPosts.map((items) => {
+            return <Card key={items.sys.id} data={items} />;
+          })}
+        </div>
+      </section>
     </div>
   );
 };

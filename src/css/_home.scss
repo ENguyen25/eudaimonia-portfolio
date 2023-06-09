@@ -1,0 +1,56 @@
+@import '../sass/mystyles.scss';
+
+/* HOME PAGE */
+
+.overlay-container {
+  position: relative;
+  margin-bottom: 1rem;
+  width: 49%;
+}
+
+.project-thumbnail {
+  display: block;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: $white;
+}
+
+.overlay-container:hover .overlay {
+  opacity: 1;
+}
+
+
+/* Tablet View */
+
+@media screen and (max-width: 769px) {
+  .project-column {
+    width: 66%;
+    margin: auto;
+    padding: 0 0.75rem;
+  }
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 426px) {
+  .project-column {
+    width: 90%;
+    margin: auto;
+  }
+
+  .overlay-container {
+    width: 100%;
+  }
+}
